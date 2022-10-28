@@ -8,6 +8,8 @@ import { Rings } from '@/components/Rings';
 import { FloatingGrid } from '@/components/FloatingGrid';
 import { Boxes } from '@/components/Boxes';
 
+import { ClimbingBoxLoader } from 'react-spinners';
+
 function CarShow() {
   return (
     <>
@@ -49,7 +51,7 @@ export default function Home() {
         <title>3D Car</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Suspense fallback={null}>
+      <Suspense fallback={<ClimbingBoxLoader color='#36d7b7' cssOverride={{ width: '100%', height: '100vh' }} size={30} />}>
         <Canvas shadows={true} style={{ height: '100vh' }}>
           <CarShow />
         </Canvas>
